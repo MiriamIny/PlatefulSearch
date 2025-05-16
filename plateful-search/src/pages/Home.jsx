@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import { useState } from 'react'; 
 import SearchBar from '../components/SearchBar';
 import MealList from '../components/MealList';
 import styles from '../styles/Home.module.css';

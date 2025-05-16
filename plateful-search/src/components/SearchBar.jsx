@@ -6,7 +6,7 @@
  *      It calls the onSearch function (passed via props) when the form is submitted.
  */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from '../styles/SearchBar.module.css';
 
 const SearchBar = ({ onSearch }) => {
