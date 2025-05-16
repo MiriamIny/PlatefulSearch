@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
 import SearchBar from '../components/SearchBar';
-import Meal from '../components/Meal';
+import MealList from '../components/MealList';
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
@@ -40,6 +40,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
+    
       {/* Search input component */}
       <SearchBar onSearch={handleSearch} />
 
@@ -47,13 +48,10 @@ const Home = () => {
       {loading && <p>Loading...</p>}
       {error && <p className={styles.error}>{error}</p>}
 
-      {/* Grid of meal result cards */}
-      <div className={styles.mealGrid}>
-        {meals.map((meal) => (
-          <Meal key={meal.idMeal} meal={meal} />
-        ))}
+      {/* Meal List Results component */}
+      <MealList mealResults={meals} />
+        
       </div>
-    </div>
   );
 };
 
