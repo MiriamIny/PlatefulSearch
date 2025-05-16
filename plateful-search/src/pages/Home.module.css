@@ -1,0 +1,11 @@
+/* src/pages/Home.module.css */
+.container {
+  padding: 1rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
