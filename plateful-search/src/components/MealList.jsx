@@ -8,9 +8,8 @@
  *   The list is generated from an array of meal objects fetched from the API.
  */
 
-import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../styles/Meal.module.css';
+import styles from '../styles/MealList.module.css';
 
 // MealList receives mealResults list from api call
 const MealList = ({ mealResults }) => {
@@ -37,7 +36,7 @@ const MealList = ({ mealResults }) => {
               <p>{strInstructions.substring(0, 50)}...</p>
 
               {/* Link to the meal detail page, using the meal ID in the URL */}
-              <Link to={`.MealDetails/${idMeal}`} className={styles.link}>View Details</Link>
+              <Link to={`.Details/${idMeal}`} className={styles.link}>View Details</Link>
 
             </div> {/* Closing meal content */}
           </div> /* Closing meal card */
