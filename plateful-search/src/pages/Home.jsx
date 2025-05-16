@@ -40,6 +40,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
+    
       {/* Search input component */}
       <SearchBar onSearch={handleSearch} />
 
@@ -49,7 +50,7 @@ const Home = () => {
 
       {/* Meal List Results component */}
       <MealList mealResults={meals} />
-
+        
       </div>
   );
 };
