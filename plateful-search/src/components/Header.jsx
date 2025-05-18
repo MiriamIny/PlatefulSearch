@@ -5,7 +5,7 @@ import logo from '../assets/logo.png';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header>
       <img src={logo} alt="Plateful Search Logo" className={styles.logo} />
       <h1>Plateful Search</h1>
       <nav className={styles.nav}>
