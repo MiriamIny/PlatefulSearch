@@ -1,6 +1,7 @@
 import { useState } from 'react'; 
 import SearchBar from '../components/SearchBar';
 import MealList from '../components/MealList';
+import Loading from '../components/Loading';
 import Error from '../components/Error';
 import styles from '../styles/Home.module.css';
 
