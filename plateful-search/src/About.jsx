@@ -16,7 +16,7 @@ const About = () => {
         API fetching, and responsive design with CSS Modules.
       </p>
       <p>
-        We're Hailey Lazar, Mirium Iny, and Temima Lewin, and we hope you enjoy using it and find inspiration for your next meal!
+        We're Hailey Lazar, Miriam Iny, and Temima Lewin, and we hope you enjoy using it and find inspiration for your next meal!
       </p>
     </div>
   );
