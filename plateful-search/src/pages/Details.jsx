@@ -10,6 +10,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MealDetails from '../components/MealDetails';
+import Loading from '../components/Loading';
+import Error from '../components/Error';
 import styles from '../styles/Details.module.css';
 
 
@@ -24,6 +26,7 @@ const Details= () => {
   const [error, setError] = useState('');
   useEffect(() => {
     const fetchMeal = async () => {
+        setLoading(true);
         try 
         {
             const result = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`);
@@ -44,8 +47,8 @@ const Details= () => {
     return (  
         <>
             {/* Conditional rendering for loading and error messages */}
-            {loading && <p>Loading...</p>}
-            {error && <p className={styles.error}>{error}</p>}
+            {loading && <Loading/>}
+            {error && <Error errorMsg={error}/>}
             < MealDetails meal={meal}/>
         </>
     );
