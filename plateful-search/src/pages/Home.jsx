@@ -1,7 +1,8 @@
-import React, { useState } from 'react'; 
+import { useState } from 'react'; 
 import SearchBar from '../components/SearchBar';
 import MealList from '../components/MealList';
 import Loading from '../components/Loading';
+import Error from '../components/Error';
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
@@ -46,8 +47,8 @@ const Home = () => {
       <SearchBar onSearch={handleSearch} />
 
       {/* Conditional rendering for loading and error messages */}
-      {loading && <Loading/>}
-      {error && <p className={styles.error}>{error}</p>}
+      {loading && <p>Loading...</p>}
+      {error && <Error errorMsg={error}/>}
 
       {/* Meal List Results component */}
       <MealList mealResults={meals} />
