@@ -51,9 +51,16 @@ const MealDetails = ({ meal }) => {
       {strYoutube && (
         <div>
           <h2>Video Tutorial</h2>
-          <a href={strYoutube} target="_blank" rel="noopener noreferrer">
+          {/* <a href={strYoutube} target="_blank" rel="noopener noreferrer">
             Watch on YouTube
-          </a>
+          </a> */}
+          <iframe
+            src={`https://www.youtube.com/embed/${strYoutube.split("v=")[1]}`}
+            title="YouTube Video Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className={styles.videoIframe}
+          ></iframe>
         </div>
       )}
     </div>

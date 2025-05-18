@@ -1,1 +1,15 @@
-
+/* Path: src/styles/MealDetails.module.cs
+ * Project: Plateful Search
+ * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
+ * Purpose: meal details component css
+ */
+ 
+ /* Video Tutorial */
+.videoIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
