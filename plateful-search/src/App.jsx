@@ -4,12 +4,14 @@ import Details from './pages/Details';
 import About from './pages/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BackBtn from './components/BackBtn';
 
 function App() {
   return (
     <BrowserRouter>
 
       <Header />
+      <BackBtn />
 
       <Routes>
         <Route path="/" element={< Home />} />
