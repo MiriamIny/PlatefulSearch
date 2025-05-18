@@ -1,4 +1,8 @@
-/* src/styles/SearchBar.module.css */
+/* Path: src/styles/SearchBar.module.css
+ * Project: Plateful Search
+ * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
+ * Purpose: meal list css
+ */
 .searchForm {
   display: flex;
   justify-content: center;

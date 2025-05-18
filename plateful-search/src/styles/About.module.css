@@ -1,4 +1,9 @@
-/* src/styles/About.module.css */
+/* Path: src/styles/About.module.cs
+ * Project: Plateful Search
+ * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
+ * Purpose: about page css
+ */
+
 .container {
   max-width: 700px;
   margin: 2rem auto;
