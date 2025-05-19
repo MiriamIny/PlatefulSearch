@@ -49,18 +49,15 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-    
-      {/* Search input component */}
-      <SearchBar onSearch={handleSearch} />
+    <SearchBar onSearch={handleSearch} />
 
-      {/* Conditional rendering for loading and error messages */}
-      {loading && <Loading/>}
-      {error && <Error errorMsg={error}/>}
+    {loading && <div className={styles.centered}><Loading /></div>}
+    {error && <div className={styles.centered}><Error errorMsg={error} /></div>}
 
-      {/* Meal List Results component */}
+    <div className={styles.sectionSpacing}>
       <MealList mealResults={meals} />
-        
-      </div>
+    </div>
+  </div>
   );
 };
 
