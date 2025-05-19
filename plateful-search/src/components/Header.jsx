@@ -8,13 +8,17 @@
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/styles.module.css';
 import logo from '../assets/logo.png';
+import BackBtn from './BackBtn';
 
 const Header = () => {
   return (
-    <header>
-      <img src={logo} alt="Plateful Search Logo" className={styles.logo} />
-      <h1>Plateful Search</h1>
-      <nav>
+   <header className={styles.header}>
+      <div className={styles.left}>
+        <img src={logo} alt="Plateful Search Logo" className={styles.logo} />
+        <h1 className={styles.title}>Plateful Search</h1>
+      </div>
+
+      <nav className={styles.nav}>
         <NavLink to="/" className={({ isActive }) => isActive ? styles.active : ''}>
           Home
         </NavLink>
@@ -22,6 +26,10 @@ const Header = () => {
           About
         </NavLink>
       </nav>
+
+      <div className={styles.right}>
+        <BackBtn />
+      </div>
     </header>
   );
 };
