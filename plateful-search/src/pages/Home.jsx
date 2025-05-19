@@ -28,6 +28,13 @@ const Home = () => {
     setMeals([]);
 
     try {
+      // Update the URL with the search query (without reloading the page)
+      window.history.replaceState(
+      null,
+      '',
+      query ? `?q=${encodeURIComponent(query)}` : window.location.pathname
+      );
+
       // Fetch meals from TheMealDB API based on query
       const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
       const data = await res.json();
