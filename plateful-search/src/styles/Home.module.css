@@ -3,8 +3,32 @@
  * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
  * Purpose: about page css
  */
+
 .container {
-  padding: 1rem;
-  max-width: 960px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+}
+
+.sectionSpacing {
+  margin-top: 2rem;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  text-align: center;
 }

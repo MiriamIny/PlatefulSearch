@@ -49,13 +49,12 @@ const Details= () => {
     , [idMeal]);
 
     return (  
-        <>
-            {/* Conditional rendering for loading and error messages */}
-            {loading && <Loading/>}
-            {error && <Error errorMsg={error}/>}
+        <div className={styles.detailsContainer}>
+        {loading && <div className={styles.loadingSpinner}><Loading /></div>}
+        {error && <div className={styles.errorMessage}><Error errorMsg={error} /></div>}
+        {meal && <MealDetails meal={meal} />}
+  </div>
+);
 
-            {meal && < MealDetails meal={meal}/>}
-        </>
-    );
 };
 export default Details;
