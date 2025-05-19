@@ -1,6 +1,10 @@
-// src/components/Footer.jsx
-import React from 'react';
-import styles from '../styles/Footer.module.css';
+/* Path: src/components/Footer.jsx
+ * Project: Plateful Search
+ * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
+ * Purpose:
+ *      This component returns a static footer
+ */
+import styles from '../styles/styles.module.css';
 
 const Footer = () => {
   return (

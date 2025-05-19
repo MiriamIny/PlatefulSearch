@@ -1,3 +1,10 @@
+/* Path: src/pages/Home.jsx
+ * Project: Plateful Search
+ * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
+ * Purpose:
+ *      The home page renders the search bar, api call, and results displayed using meal list
+ */
+
 import { useState } from 'react'; 
 import SearchBar from '../components/SearchBar';
 import MealList from '../components/MealList';
@@ -47,7 +54,7 @@ const Home = () => {
       <SearchBar onSearch={handleSearch} />
 
       {/* Conditional rendering for loading and error messages */}
-      {loading && <p>Loading...</p>}
+      {loading && <Loading/>}
       {error && <Error errorMsg={error}/>}
 
       {/* Meal List Results component */}

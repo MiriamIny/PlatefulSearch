@@ -12,7 +12,7 @@ import styles from '../styles/styles.module.css';
 const BackBtn = () => {
     const navigate = useNavigate();
 
-    return (<button className={back-btn} onClick={() => navigate(-1)}>Back</button>);
+    return (<button className={styles['back-btn']} onClick={() => navigate(-1)}>Back</button>);
 };
 
 export default BackBtn;

@@ -18,7 +18,7 @@ const MealList = ({ mealResults }) => {
 
       {mealResults.map((mealItem) => {
         // Destructure each element from the meal list array
-        const { idMeal, strMeal, strInstructions, strMealThumb } = mealItem;
+        const { idMeal, strMeal, strMealThumb } = mealItem;
 
         // Within each meal constructing, return that meal
         return (
@@ -27,16 +27,13 @@ const MealList = ({ mealResults }) => {
             {/* Meal thumbnail image */}
             <img src={strMealThumb} alt={strMeal} className={styles.imageThumb} />
 
-            {/* Content section with title, preview text, and link */}
+            {/* Content section with title and link */}
             <div className={styles.content}>
 
               <h3>{strMeal}</h3>
 
-              {/* First 100 characters of the instructions followed by ellipsis */}
-              <p>{strInstructions.substring(0, 50)}...</p>
-
               {/* Link to the meal detail page, using the meal ID in the URL */}
-              <Link to={`.Details/${idMeal}`} className={styles.link}>View Details</Link>
+              <Link to={`/details/${idMeal}`} className={styles.link}>View Details</Link>
 
             </div> {/* Closing meal content */}
           </div> /* Closing meal card */

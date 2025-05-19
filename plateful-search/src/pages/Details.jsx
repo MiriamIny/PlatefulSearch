@@ -25,7 +25,8 @@ const Details= () => {
   // State to hold any error messages
   const [error, setError] = useState('');
   useEffect(() => {
-    const fetchMeal = async () => {
+    const fetchMeal = async () => 
+    {
         setLoading(true);
         try 
         {
@@ -34,22 +35,26 @@ const Details= () => {
             // If meals found, update state, otherwise show "No results"
             if (data.meals) { setMeal(data.meals[0]); } 
             else { setError('The recipe you are looking for does not exist.'); }
+            console.log(meal);
+
         }
-        catch (error) {
+        catch (error) 
+        {
             setError('Failed to load meal details. Please try again later.');
         }
         setLoading(false);
-        };
+    };
 
-        fetchMeal();}
-        , [idMeal]);
+    fetchMeal();}
+    , [idMeal]);
 
     return (  
         <>
             {/* Conditional rendering for loading and error messages */}
             {loading && <Loading/>}
             {error && <Error errorMsg={error}/>}
-            < MealDetails meal={meal}/>
+
+            {meal && < MealDetails meal={meal}/>}
         </>
     );
 };

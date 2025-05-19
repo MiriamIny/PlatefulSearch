@@ -6,9 +6,47 @@
  *          body
  *          header
  *          footer
+ *          back-btn
  *          loader
  *          error
  */
+
+/* Base Variables for Customization */
+:root {
+    --primary-color: #af8ea1;
+    --secondary-color: #556370;
+    --bg-color: #ecf0f1;
+    --header-bg-color: #7a8a9b;
+    --footer-bg-color: #7a8a9b;
+    --text-color: #86295b;
+    --button-bg-color: #af8ea1;
+    --button-hover-color: #cc557f;
+    --main-border-radius: 14px;
+    --input-border-radius: 10px;
+    --font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    --font-size: 16px;
+    --header-font-size: 32px;
+    --subheader-font-size: 22px;
+    --transition-speed: 0.6s;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensures the full height is used without overflow */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevents horizontal scrollbars */
+}
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -35,7 +73,8 @@ header.active {
   border-bottom: 2px solid #0077cc;
 }
 
-.footer {
+/* Footer */
+footer {
   background-color: #f5f5f5;
   text-align: center;
   padding: 1rem 0;
