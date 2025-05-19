@@ -6,23 +6,30 @@
  */
 
 import { NavLink } from 'react-router-dom';
-import styles from '../styles/styles.module.css';
+import BackBtn from '../components/BackBtn';
 import logo from '../assets/logo.png';
+import '../App.css';
 
 const Header = () => {
+  // Function to scroll window to top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
-    <header>
-      <img src={logo} alt="Plateful Search Logo" className={styles.logo} />
-      <h1>Plateful Search</h1>
+    <div className="headerContainer">
+      <BackBtn />
+      <header>
+        <img src={logo} alt="Plateful Search" />
+      </header>
       <nav>
-        <NavLink to="/" className={({ isActive }) => isActive ? styles.active : ''}>
+        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ''} onClick={scrollToTop}>
           Home
         </NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ''}>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ''} onClick={scrollToTop}>
           About
         </NavLink>
       </nav>
-    </header>
+    </div>
   );
 };
 

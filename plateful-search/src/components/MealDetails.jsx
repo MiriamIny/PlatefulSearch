@@ -1,4 +1,4 @@
-/* Path: src\components\MealDetails.jsx
+/* Path: src/components/MealDetails.jsx
  * Project: Plateful Search
  * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
  * Purpose:
@@ -19,41 +19,38 @@ const MealDetails = ({ meal }) => {
   for (let i = 1; i <= 20; i++) {
     const ingredient = meal[`strIngredient${i}`];
     const measure = meal[`strMeasure${i}`];
-    // Only include non-empty ingredients
     if (ingredient && ingredient.trim()) {
-      ingredients.push(`${measure} ${ingredient}`.trim());
+      ingredients.push(`${measure ? measure.trim() : ''} ${ingredient.trim()}`.trim());
     }
   }
 
-  // Render the meal details UI
   return (
     <div className={styles.container}>
-      <h1>{strMeal}</h1>
+      <h1 className={styles.title}>{strMeal}</h1>
       <img src={strMealThumb} alt={strMeal} className={styles.image} />
       
-      {/* Display basic info about the meal */}
-      <p><strong>Category:</strong> {strCategory}</p>
-      <p><strong>Origin:</strong> {strArea}</p>
+      <div className={styles.info}>
+        <p><strong>Category:</strong> {strCategory}</p>
+        <p><strong>Origin:</strong> {strArea}</p>
+      </div>
 
-      {/* Display list of ingredients */}
-      <h2>Ingredients</h2>
-      <ul>
-        {ingredients.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <section className={styles.section}>
+        <h2>Ingredients</h2>
+        <ul className={styles.ingredientsList}>
+          {ingredients.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </section>
 
-      {/* Show cooking instructions */}
-      <h2>Instructions</h2>
-      <p>{strInstructions}</p>
+      <section className={styles.section}>
+        <h2>Instructions</h2>
+        <p className={styles.instructions}>{strInstructions}</p>
+      </section>
 
-      {/* Include video tutorial link if available */}
       {strYoutube && (
-        <div>
+        <section className={styles.section}>
           <h2>Video Tutorial</h2>
-          {/* <a href={strYoutube} target="_blank" rel="noopener noreferrer">
-            Watch on YouTube
-          </a> */}
           <iframe
             src={`https://www.youtube.com/embed/${strYoutube.split("v=")[1]}`}
             title="YouTube Video Tutorial"
@@ -61,7 +58,7 @@ const MealDetails = ({ meal }) => {
             allowFullScreen
             className={styles.videoIframe}
           ></iframe>
-        </div>
+        </section>
       )}
     </div>
   );

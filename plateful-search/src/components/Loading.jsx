@@ -4,11 +4,11 @@
  * Purpose: This component returns a css loader
  */
 
-import styles from '../styles/styles.module.css';
+import '../App.css';
 
 const Loading = () => 
 {
-    return (<div className={styles.loader}></div>);
+    return (<div className="loader"></div>);
 };
 
 export default Loading;

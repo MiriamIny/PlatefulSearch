@@ -1,7 +1,7 @@
 /* Path: src/styles/About.module.cs
  * Project: Plateful Search
  * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
- * Purpose: about page css
+ * Purpose: scoped about page css
  */
 
 .container {
@@ -11,32 +11,10 @@
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
-}
-
-h2 {
-   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-  border-bottom: 2px solid #0077cc;
-  padding-bottom: 0.5rem;
-}
-
-p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 1.2rem;
-  color: #444;
-}
-
-body {
-  background-color: #f5f7fa;
-  margin: 0;
-  padding: 0;
 }

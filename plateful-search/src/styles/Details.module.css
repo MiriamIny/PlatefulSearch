@@ -1,4 +1,4 @@
-/* Path: src/styles/About.module.cs
+/* Path: src/styles/Details.module.cs
  * Project: Plateful Search
  * Developers: Temima Lewin, Miriam Iny, and Hailey Lazar
  * Purpose: details page css
@@ -19,23 +19,4 @@
     padding: 1.5rem;
     margin: 2rem 1rem;
   }
-}
-
-.errorMessage {
-  color: #d9534f;
-  background-color: #fcebea;
-  border-left: 6px solid #d9534f;
-  padding: 1rem;
-  border-radius: 8px;
-  margin: 1rem auto;
-  max-width: 600px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.loadingSpinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem auto;
 }

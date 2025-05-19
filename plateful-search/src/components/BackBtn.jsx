@@ -6,13 +6,27 @@
  */
 
 import { useNavigate } from 'react-router-dom';
-import styles from '../styles/styles.module.css';
+import '../App.css';
 
 
 const BackBtn = () => {
     const navigate = useNavigate();
+    // Function to scroll window to top
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
-    return (<button className={styles['back-btn']} onClick={() => navigate(-1)}>Back</button>);
+    return (
+        <button
+            className="back-btn"
+            onClick={() => {
+                navigate(-1);
+                scrollToTop();
+            }}
+        >
+            Back
+        </button>
+    );
 };
 
 export default BackBtn;

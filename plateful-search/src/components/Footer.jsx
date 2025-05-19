@@ -4,7 +4,8 @@
  * Purpose:
  *      This component returns a static footer
  */
-import styles from '../styles/styles.module.css';
+
+import '../App.css';
 
 const Footer = () => {
   return (

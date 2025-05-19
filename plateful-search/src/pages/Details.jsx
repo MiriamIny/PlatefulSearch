@@ -50,11 +50,11 @@ const Details= () => {
 
     return (  
         <div className={styles.detailsContainer}>
-        {loading && <div className={styles.loadingSpinner}><Loading /></div>}
-        {error && <div className={styles.errorMessage}><Error errorMsg={error} /></div>}
-        {meal && <MealDetails meal={meal} />}
-  </div>
-);
+            {loading && <Loading />}
+            {error && <Error errorMsg={error} />}
+            {meal && <MealDetails meal={meal} />}
+        </div>
+    );
 
 };
 export default Details;

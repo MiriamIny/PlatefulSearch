@@ -13,6 +13,12 @@ import styles from '../styles/MealList.module.css';
 
 // MealList receives mealResults list from api call
 const MealList = ({ mealResults }) => {
+
+  // Function to scroll window to top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className={styles.mealGrid}>
 
@@ -33,9 +39,15 @@ const MealList = ({ mealResults }) => {
               <h3>{strMeal}</h3>
 
               {/* Link to the meal detail page, using the meal ID in the URL */}
-              <Link to={`/details/${idMeal}`} className={styles.link}>View Details</Link>
+              <Link
+                to={`/details/${idMeal}`}
+                className={styles.link}
+                onClick={scrollToTop}
+              >
+                View Details
+              </Link>
 
-            </div> {/* Closing meal content */}
+              </div> {/* Closing meal content */}
           </div> /* Closing meal card */
         ); /* Close meal item return */
       })} {/* Closing meal grid */}

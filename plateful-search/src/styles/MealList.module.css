@@ -44,13 +44,14 @@
 .link {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #2e8b57;
+  color: var(--secondary-color);
+  font-family: var(--basic-font-family);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .link:hover {
-  color: #1b4d33;
+  color: var(--primary-color);
   text-decoration: underline;
 }

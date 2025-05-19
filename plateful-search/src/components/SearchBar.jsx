@@ -8,6 +8,7 @@
 
 import { useState } from 'react';
 import styles from '../styles/SearchBar.module.css';
+import searchIcon from '../assets/search-icon.png';
 
 const SearchBar = ({ onSearch }) => {
   // Local state to track user input
@@ -35,7 +36,9 @@ const SearchBar = ({ onSearch }) => {
         className={styles.input}
       />
       {/* Submit button triggers handleSubmit */}
-      <button type="submit" className={styles.button}>Search</button>
+      <button type="submit" className={styles.button}>
+        <img className={styles.searchIcon} src={searchIcon} alt="Search" />
+      </button>
     </form>
   );
 };

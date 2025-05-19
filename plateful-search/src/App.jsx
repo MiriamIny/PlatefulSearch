@@ -4,21 +4,20 @@ import Details from './pages/Details';
 import About from './pages/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import BackBtn from './components/BackBtn';
+import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/PlatefulSearch">
 
       <Header />
-      <BackBtn />
-
-      <Routes>
-        <Route path="/" element={< Home />} />
-        <Route path="/details/:idMeal" element={< Details />} /> 
-        <Route path="/about" element={< About />} />
-      </Routes>
-
+      <div className="container">
+        <Routes>
+          <Route path="/" element={< Home />} />
+          <Route path="/details/:idMeal" element={< Details />} /> 
+          <Route path="/about" element={< About />} />
+        </Routes>
+      </div>
       <Footer />
 
     </BrowserRouter>
