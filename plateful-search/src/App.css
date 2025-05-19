@@ -13,14 +13,14 @@
 
 /* Base Variables for Customization */
 :root {
-    --primary-color: #af8ea1;
-    --secondary-color: #556370;
-    --bg-color: #ecf0f1;
-    --header-bg-color: #7a8a9b;
-    --footer-bg-color: #7a8a9b;
-    --text-color: #86295b;
-    --button-bg-color: #af8ea1;
-    --button-hover-color: #cc557f;
+    --primary-color: #b38394;             /* Muted rose-mauve (main accents) */
+    --secondary-color: #5c6d7c;           /* Dusty blue-gray (nav, contrast) */
+    --bg-color: #f7f3f4;                  /* Soft off-white pink background */
+    --header-bg-color: #473b45;           /* Deep muted plum-gray (high contrast for logo) */
+    --footer-bg-color: #d2b8c2;
+    --text-color: #704f5a;                /* Deep muted rosewood */
+    --button-bg-color: #b38394;           /* Matches primary, for buttons */
+    --button-hover-color: #995f75;        /* Darker hover shade */
     --main-border-radius: 14px;
     --input-border-radius: 10px;
     --script-font-family: 'Adelia';
